@@ -4,8 +4,6 @@ body {
     align-items: center;
     height: 100vh;
     background: #222;
-    color: white;
-    font-family: Arial, sans-serif;
 }
 
 .cd-player {
@@ -13,19 +11,20 @@ body {
 }
 
 .cd {
-    width: 150px;
-    height: 150px;
+    width: 250px; /* Bigger CD */
+    height: 250px;
     background: radial-gradient(circle, silver 10%, gray 40%, black 60%);
     border-radius: 50%;
-    border: 5px solid #444;
+    border: 8px solid #444;
     position: relative;
-    margin-bottom: 20px;
+    animation: spin 4s linear infinite;
 }
 
+/* Center Hole */
 .cd::before {
     content: "";
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background: black;
     border-radius: 50%;
     position: absolute;
@@ -34,26 +33,37 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/* Heart Inside CD */
+.heart {
+    width: 30px;
+    height: 30px;
+    background: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.heart::before, 
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -15px;
+}
+
+.heart::after {
+    right: 15px;
+}
+
+/* CD Spinning Animation */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
-.spinning {
-    animation: spin 2s linear infinite;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background: #ff9800;
-    color: white;
-}
-
-button:hover {
-    background: #e68900;
-}
-
