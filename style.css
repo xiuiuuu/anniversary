@@ -11,51 +11,56 @@ body {
 }
 
 .cd {
-    width: 450px;
-    height: 450px;
+    width: 550px; 
+    height: 550px;
     background: radial-gradient(circle, silver 10%, gray 40%, black 60%);
     border-radius: 50%;
     border: 15px solid #444;
     position: relative;
     animation: spin 4s linear infinite;
 }
+
+
 .cd::before {
     content: "";
-    width: 120px;
-    height: 120px;
+    width: 100px; 
+    height: 100px;
     background: black;
     border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2; 
 }
+
 .heart {
-    width: 90px;
-    height: 90px;
+    width: 60px; /* Adjusted heart size */
+    height: 60px;
     background: red;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
+    z-index: 1; /* Behind the center hole */
 }
 
 .heart::before, 
 .heart::after {
     content: "";
-    position: above;
-    width: 90px;
-    height: 90px;
+    position: absolute;
+    width: 60px;
+    height: 60px;
     background: red;
     border-radius: 50%;
 }
 
 .heart::before {
-    top: -45px;
+    top: -30px;
 }
 
 .heart::after {
-    right: 45px;
+    right: 30px;
 }
 
 @keyframes spin {
