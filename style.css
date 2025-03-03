@@ -11,11 +11,11 @@ body {
 }
 
 .cd {
-    width: 250px; /* Bigger CD */
-    height: 250px;
+    width: 750px; /* 3x Bigger CD */
+    height: 750px;
     background: radial-gradient(circle, silver 10%, gray 40%, black 60%);
     border-radius: 50%;
-    border: 8px solid #444;
+    border: 15px solid #444;
     position: relative;
     animation: spin 4s linear infinite;
 }
@@ -23,8 +23,8 @@ body {
 /* Center Hole */
 .cd::before {
     content: "";
-    width: 40px;
-    height: 40px;
+    width: 120px;
+    height: 120px;
     background: black;
     border-radius: 50%;
     position: absolute;
@@ -35,8 +35,8 @@ body {
 
 /* Heart Inside CD */
 .heart {
-    width: 30px;
-    height: 30px;
+    width: 90px;
+    height: 90px;
     background: red;
     position: absolute;
     top: 50%;
@@ -48,18 +48,18 @@ body {
 .heart::after {
     content: "";
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 90px;
+    height: 90px;
     background: red;
     border-radius: 50%;
 }
 
 .heart::before {
-    top: -15px;
+    top: -45px;
 }
 
 .heart::after {
-    right: 15px;
+    right: 45px;
 }
 
 /* CD Spinning Animation */
@@ -67,3 +67,4 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
