@@ -116,6 +116,45 @@ outline: none;
 cursor: pointer;
 }
 
+.slider  {
+-webkit-apperance: none;
+apperance: none;
+transform: rotate(90deg);
+width: 90px;
+height: 7px;
+position: absolute;
+left: 233px;
+top: 60px;
+background-color: #be272a;
+outline: none;
+border-radius: 3px;
+border: 6px solid #ed5650;
+}
+.slider::webkit-slider-thumb{
+-webkit-apperance: none;
+apperance: none;
+width: 10px;
+height: 12px;
+background-color: #ffffff;
+cursor: pointer;
+}
+.player {
+transform: rotate(30deg);
+transform-origin: top;
+transition: 1s;
+}
+.on {
+animation: spin 3s 1s linear infinite;
+}
+
+@keyframes spin {
+100% { transform: rotate(360deg);
+
+
+
+
+
+
 
     
     
