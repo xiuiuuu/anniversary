@@ -119,7 +119,7 @@ cursor: pointer;
 .slider  {
 -webkit-apperance: none;
 apperance: none;
-transform: rotate(90deg);
+transform: rotate(-90deg);
 width: 90px;
 height: 7px;
 position: absolute;
