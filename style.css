@@ -75,8 +75,8 @@ body {
     width: 8px;
     background-color: #fdb0c0;
     position: absolute;
-    top: 10px;
-    right: 55px; /* Adjusted left to align better */
+    top: 40px;  /* LOWERED to align better */
+    right: 55px; /* Adjusted left */
     transform-origin: top right;
     transition: transform 1s ease-in-out;
 }
@@ -86,7 +86,7 @@ body {
     transform: rotate(30deg);
 }
 
-/* Control (Needle at Top Right) */
+/* Control (Needle at Top Right of Tone-Arm) */
 .control {
     background-color: #181312;
     height: 17px;
@@ -94,8 +94,8 @@ body {
     border: 5px solid #2c2c2c;
     border-radius: 50%;
     position: absolute;
-    top: 0px;  /* Position it at the top */
-    right: 0px; /* Align to the right */
+    top: -10px;  /* Adjusted so it sits properly */
+    right: -4px; /* Moved slightly left */
 }
 
 /* Play Button */
