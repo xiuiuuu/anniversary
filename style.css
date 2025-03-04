@@ -71,20 +71,31 @@ body {
 
 /* Tone Arm */
 .tone-arm {
-    height: 110px; /* Adjusted length */
+    height: 140px; /* Extended to reach the record */
     width: 8px;
     background-color: #fdb0c0;
     position: absolute;
-    top: 20px;
-    right: 65px; /* Adjusted position to avoid overlap */
+    top: 10px;
+    right: 55px; /* Adjusted left to align better */
     transform-origin: top right;
     transition: transform 1s ease-in-out;
-    z-index: 2; /* Ensures it stays above other elements */
 }
 
 /* Move the tone-arm onto the record when playing */
 .tone-arm.play {
     transform: rotate(30deg);
+}
+
+/* Control (Needle at End of Tone Arm) */
+.control {
+    background-color: #181312;
+    height: 17px;
+    width: 17px;
+    border: 5px solid #2c2c2c;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8px;
+    left: -6px;
 }
 
 /* Play Button */
@@ -108,13 +119,19 @@ body {
     width: 90px;
     height: 7px;
     position: absolute;
-    left: 250px; /* Moved further to the left */
-    top: 80px; /* Adjusted to avoid overlap */
+    left: 233px;
+    top: 60px;
     background-color: #be272a;
     outline: none;
     border-radius: 3px;
     border: 6px solid #ed5650;
-    z-index: 1; /* Stays below the tone-arm */
+}
+
+/* Prevent slider and tone-arm from overlapping */
+.slider-container {
+    position: absolute;
+    right: 15px;
+    top: 70px;
 }
 
 .slider::-webkit-slider-thumb {
@@ -133,13 +150,3 @@ body {
 .on {
     animation: spin 3s linear infinite;
 }
-
-
-
-
-
-
-
-    
-    
-    
