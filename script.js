@@ -6,21 +6,21 @@ let song = document.querySelector(".my-song");
 let slider = document.querySelector(".slider");
 
 btn.addEventListener("click", () => {
-    if (!state) {
-        record.classList.add("on");
-        toneArm.classList.add("play"); // Fixed syntax error
-        setTimeout(() => {
-            song.play();
-        }, 1000);
-    } else {
-        record.classList.remove("on");
-        toneArm.classList.remove("play"); // Fixed syntax error
-        song.pause();
-    }
-    state = !state;
+  if (!state) {
+    record.classList.add("on"); // Start record spinning
+    toneArm.classList.add("play"); // Move tone-arm onto record
+    setTimeout(() => {
+      song.play();
+    }, 1000);
+  } else {
+    record.classList.remove("on"); // Stop spinning
+    toneArm.classList.remove("play"); // Move tone-arm back
+    song.pause();
+  }
+  state = !state;
 });
 
-// Volume slider control (Fixed the logic)
+// Volume control
 slider.addEventListener("input", (e) => {
-    song.volume = Number(e.target.value);
+  song.volume = Number(e.target.value);
 });
