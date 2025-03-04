@@ -71,14 +71,15 @@ body {
 
 /* Tone Arm */
 .tone-arm {
-    height: 70px;
+    height: 90px; /* Increased from 70px to 90px */
     width: 8px;
     background-color: #fdb0c0;
     position: absolute;
     top: 20px;
-    right: 50px;
+    right: 52px; /* Moved 2px left */
     transform-origin: top right;
     transition: transform 1s ease-in-out;
+
 }
 
 /* Move the tone-arm onto the record when playing */
