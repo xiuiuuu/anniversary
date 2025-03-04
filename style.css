@@ -71,7 +71,7 @@ body {
 
 /* Tone Arm */
 .tone-arm {
-    height: 140px; /* Extended to reach the record */
+    height: 140px; /* Extended to touch the record */
     width: 8px;
     background-color: #fdb0c0;
     position: absolute;
@@ -86,7 +86,7 @@ body {
     transform: rotate(30deg);
 }
 
-/* Control (Needle at End of Tone Arm) */
+/* Control (Needle at Top Right) */
 .control {
     background-color: #181312;
     height: 17px;
@@ -94,8 +94,8 @@ body {
     border: 5px solid #2c2c2c;
     border-radius: 50%;
     position: absolute;
-    bottom: -8px;
-    left: -6px;
+    top: 0px;  /* Position it at the top */
+    right: 0px; /* Align to the right */
 }
 
 /* Play Button */
@@ -125,13 +125,6 @@ body {
     outline: none;
     border-radius: 3px;
     border: 6px solid #ed5650;
-}
-
-/* Prevent slider and tone-arm from overlapping */
-.slider-container {
-    position: absolute;
-    right: 15px;
-    top: 70px;
 }
 
 .slider::-webkit-slider-thumb {
