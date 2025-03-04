@@ -71,37 +71,18 @@ body {
 
 /* Tone Arm */
 .tone-arm {
-    height: 15px; 
-    width: 6px;
+    height: 70px;
+    width: 8px;
     background-color: #fdb0c0;
     position: absolute;
-    top: 25px;
-    right: 95px;   
-    transition: 1s;
-    transform-origin: top;
+    top: 20px;
+    right: 50px;
+    transform-origin: top right;
+    transition: transform 1s ease-in-out;
 }
 
-.tone-arm:before {
-    content: "";
-    height: 40px;
-    width: 6px;
-    background-color: #ffffff;
-    position: absolute;
-    transform: rotate(30deg);
-    bottom: -36px;
-    right: 10px;
-}
-
-.tone-arm:after {
-    content: "";
-    position: absolute;
-    height: 0;
-    width: 10px;
-    border-top: 18px solid #b2aea6;
-    border-left: 2px solid transparent;
-    border-right: 2px solid transparent; 
-    top: 108px;
-    right: 12.5px;
+/* Move the tone-arm onto the record when playing */
+.tone-arm.play {
     transform: rotate(30deg);
 }
 
@@ -150,7 +131,6 @@ body {
 .on {
     animation: spin 3s linear infinite;
 }
-
 
 
 
